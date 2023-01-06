@@ -1,0 +1,154 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="UseBrowserEdgeExtractNameAndPhone" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Name" Type="OutArgument(x:String)" />
+    <x:Property Name="Phone" Type="OutArgument(x:String)" />
+    <x:Property Name="SellerId" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>690,948</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Free classifieds in Uganda ▷ Post free classified ads on Jiji.ug" sap:VirtualizedContainerService.HintSize="434,883" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9c31f4df-f8cc-4ae8-8c4d-91b8271f1092" Version="V2">
+    <uix:NApplicationCard.Body>
+      <ActivityAction x:TypeArguments="x:Object">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="StoreName" />
+            <Variable x:TypeArguments="x:String" Name="StoreContact" />
+            <Variable x:TypeArguments="x:String" Name="Ulr" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NGetText DisplayName="Get Text 'Store address'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="9c31f4df-f8cc-4ae8-8c4d-91b8271f1092" TextString="[Name]" Version="V3">
+            <uix:NGetText.Target>
+              <uix:TargetAnchorable BrowserURL="https://jiji.ug/sellerpage-281966" DesignTimeRectangle="109, 335, 110, 17" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Silman's Point'" FullSelectorArgument="&lt;webctrl aaname='Silman&amp;apos;s Point' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' /&gt;" Guid="85c03ea8-6b68-408a-ba71-7e3f7d775f52" InformativeScreenshot="327ed43d8e17823659201af7d0abe7c9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Free classifieds in Uganda ▷ Post free classified ads on Jiji.ug' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                <uix:TargetAnchorable.Anchors>
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                    <uix:Target DesignTimeRectangle="109, 541, 119, 16" ElementType="Text" FriendlyName="'Store address'" FullSelectorArgument="&lt;webctrl aaname='Store address' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Store address' tag='SPAN' type='' class='' check:innerText='STORE ADDRESS' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHsAAAAUCAYAAACtZULwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKASURBVGhD7VY7dgIxDMyBc4fcIC0NRVoK6CgpoabgBrxHwSWctaT1WtYHQZIm9rznAlYrjWZke9/SQDcYZneEYXZHGGZ3hGF2RxBmn7Zf6f2zWutjutKzdN7zZ836ONwpMOOSVu7zCU6+1ZliADLXsjZpd6MwDVRD1M6w6tc9Z0TjPJ7bC8VkxPtx/ZhxO6aPOmZaXD8EMxsSM1JzsX060e8FmbAhtCrwPe3WU652eDTy8H6d26nlAmuutjmf0oNRH3oO8BRxJk80d9Ej1k/IDzC6yUXmtwNemY2E5ER4/9uNaZM1i19IWGa3cUFxBKDpLIzBKVr/F3heD5sqR6QfS0f+P8+7QPu/MhuJ601pMAhnYdSTgFAL98dmQ8O0M7RdYtfn74bjHJ5c/Eg/QT9Ab2tzcTR3Nk7No7MfoRPWJoqh7LYJlojQQJ1b8irLrIXvFP7aceeYyJ5F40wTkQsfXqWXvFgdGaf5AZrXcQZX8YFWQOc+JiBzGPTGnja7JllWm9cS0YEwqD0tJkRNjMY5JrK6r/Tz0A8E3ulaTc/sAkUkgEE4N//yMU5ibZvj9mlx6Ags4tSr4uaYyI7naJzCU3xQAV4wu8Dyo4Hiw2K28nCGet+ZhNEw/fhviGoi0gT/aCdoR3YG5S7cTBMDPAGt8BpPGjz2fqCfkB+O8YoGjz/QLOE8wkC0JaHkN0Sc76BlYJ4z27tK2OAa9SEmwFPEWTxpyLwTQCLoB2ndbi5tg4pjHIIysbL06XpMOD/nucQEGiJmII85v8xVL54XY9VpzwBxKC8JJVYjUjjO04RyIK94PyE/5mGqltZ/4M4e+C8YZneEYXZHGGZ3hGF2N0jpG7OJNggUn6bfAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                  </scg:List>
+                </uix:TargetAnchorable.Anchors>
+              </uix:TargetAnchorable>
+            </uix:NGetText.Target>
+          </uix:NGetText>
+          <uix:NClick ClickType="Single" DisplayName="Click 'Store address'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c31f4df-f8cc-4ae8-8c4d-91b8271f1092" Version="V3">
+            <uix:NClick.Target>
+              <uix:TargetAnchorable BrowserURL="https://jiji.ug/sellerpage-281966" DesignTimeRectangle="117, 416, 269, 40" DesignTimeScaleFactor="1" FriendlyName="'Show contact'" FullSelectorArgument="&lt;webctrl class='fw-button__content' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span&amp;gt;button&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='fw-button__content' type='' tag='SPAN' aaname=' ' check:innerText='Show contact' /&gt;" Guid="c12c1639-ad82-44e6-8913-f26df6f42c5b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAREAAAAsCAYAAABCB4xJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALbSURBVHhe7dxNbuJAEIZhbjb3yHWy5SDZZJkDcAGUNVLWXkVimV2P+8+Um89NDYwMRG9JjzQuYzcg1Ud7FtkEiqKoG4oQoSjqptpsPv4EALiabAKAl2wCgJdsAoCXbAKAl2wCgJdsAoCXbAKAl2wCgJdsAoCXbAKAl2wCgJdsAoCXbAKAl2wCgJdsYj2fuzCUv8tQa//Vnv8O75+m99Rew/tP8xmv9hb2v+q7eVKyiXWogCihMgyvy695aoTIryObWMXL8B3Czy689PolRPbHsVervebrUE7EMkOV+oewnV4bh24+wHGtKbAa6X1M1Qzr0pqj7TGG4C6tVSuvmQOk1rTu7F6x7HselWCtla/Ln6XW/wklXEU2sY4yPN0BqAN0fCu9PDzzAWyDox43v9RlvVNoxKFuwqFKrzXDbI+7a+YQscc5jOq9mp1Ie68aDs3nPX1H9rj5fLgP2cRq5r/2Y7W7DPE4k4Y0DVkeyHYncTpfdwX5fNp1HA9hsLscsRNaum/vXLvmKQRGs8/QhIhgr0/fj3yPESHyEGQTd5GGp9Q0pN0QaX+lszR4dgjTv+PwxvvEa/KuIIWKDAp93945u+ZVIZJeY2rpXjOEyEOQTdyXfXS4MUTy9fFep/CI18drtselAVwxREx41J69nhB5ArKJFejHgsQOXTdE9D3mg1d2IMMYTKWXdyC7sF98TOi8N8eaZ4PfCZFZ4BX2+nSex5nHJptYR9pxnP+qz4awGyLj8YX/5JxeP9Y0+GVdHRKF3Q1F9n1cWPOfQ8SERDqONV3f7nxsiBEiD0E2sZ40YPOaDfelEIlKKOQSQ9UO/cIjSWsa6FKz13fW7IdIGxQ5FKYae/l8G2CmzL3PAhLrk00A8JJNAPCSTQDwkk0A8JJNAPCSTQDwkk0A8JJNAPCSTQDwkk0A8JJNAPCSTQDwkk0A8JJNAPCSTQDwyn+NgaIo6roiRCiKuqFC+AvT6Xum9hDjuQAAAABJRU5ErkJggg==" InformativeScreenshot="bb6718466e1b5624fa41ca1d49062dc6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Free classifieds in Uganda ▷ Post free classified ads on Jiji.ug' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                <uix:TargetAnchorable.Anchors>
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                    <uix:Target DesignTimeRectangle="109, 541, 119, 16" ElementType="Text" FriendlyName="'Store address'" FullSelectorArgument="&lt;webctrl aaname='Store address' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Store address' tag='SPAN' type='' class='' check:innerText='STORE ADDRESS' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHsAAAAUCAYAAACtZULwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKASURBVGhD7VY7dgIxDMyBc4fcIC0NRVoK6CgpoabgBrxHwSWctaT1WtYHQZIm9rznAlYrjWZke9/SQDcYZneEYXZHGGZ3hGF2RxBmn7Zf6f2zWutjutKzdN7zZ836ONwpMOOSVu7zCU6+1ZliADLXsjZpd6MwDVRD1M6w6tc9Z0TjPJ7bC8VkxPtx/ZhxO6aPOmZaXD8EMxsSM1JzsX060e8FmbAhtCrwPe3WU652eDTy8H6d26nlAmuutjmf0oNRH3oO8BRxJk80d9Ej1k/IDzC6yUXmtwNemY2E5ER4/9uNaZM1i19IWGa3cUFxBKDpLIzBKVr/F3heD5sqR6QfS0f+P8+7QPu/MhuJ601pMAhnYdSTgFAL98dmQ8O0M7RdYtfn74bjHJ5c/Eg/QT9Ab2tzcTR3Nk7No7MfoRPWJoqh7LYJlojQQJ1b8irLrIXvFP7aceeYyJ5F40wTkQsfXqWXvFgdGaf5AZrXcQZX8YFWQOc+JiBzGPTGnja7JllWm9cS0YEwqD0tJkRNjMY5JrK6r/Tz0A8E3ulaTc/sAkUkgEE4N//yMU5ibZvj9mlx6Ags4tSr4uaYyI7naJzCU3xQAV4wu8Dyo4Hiw2K28nCGet+ZhNEw/fhviGoi0gT/aCdoR3YG5S7cTBMDPAGt8BpPGjz2fqCfkB+O8YoGjz/QLOE8wkC0JaHkN0Sc76BlYJ4z27tK2OAa9SEmwFPEWTxpyLwTQCLoB2ndbi5tg4pjHIIysbL06XpMOD/nucQEGiJmII85v8xVL54XY9VpzwBxKC8JJVYjUjjO04RyIK94PyE/5mGqltZ/4M4e+C8YZneEYXZHGGZ3hGF2N0jpG7OJNggUn6bfAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                  </scg:List>
+                </uix:TargetAnchorable.Anchors>
+              </uix:TargetAnchorable>
+            </uix:NClick.Target>
+          </uix:NClick>
+          <uix:NGetText DisplayName="Get Text 'Store address'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="9c31f4df-f8cc-4ae8-8c4d-91b8271f1092" TextString="[Phone]" Version="V3">
+            <uix:NGetText.Target>
+              <uix:TargetAnchorable BrowserURL="https://jiji.ug/sellerpage-281966" DesignTimeRectangle="117, 416, 269, 40" DesignTimeScaleFactor="1" FriendlyName="'Show contact'" FullSelectorArgument="&lt;webctrl class='fw-button__content' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span&amp;gt;button&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='fw-button__content' type='' tag='SPAN' aaname=' ' /&gt;" Guid="111f29f7-3240-48f2-a848-89311bcd222c" InformativeScreenshot="e5392522c01664964e05f8141833a159.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Free classifieds in Uganda ▷ Post free classified ads on Jiji.ug' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                <uix:TargetAnchorable.Anchors>
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <uix:Target DesignTimeRectangle="109, 541, 119, 16" ElementType="Text" FriendlyName="'Store address'" FullSelectorArgument="&lt;webctrl aaname='Store address' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Store address' tag='SPAN' type='' class='' check:innerText='STORE ADDRESS' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHsAAAAUCAYAAACtZULwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKASURBVGhD7VY7dgIxDMyBc4fcIC0NRVoK6CgpoabgBrxHwSWctaT1WtYHQZIm9rznAlYrjWZke9/SQDcYZneEYXZHGGZ3hGF2RxBmn7Zf6f2zWutjutKzdN7zZ836ONwpMOOSVu7zCU6+1ZliADLXsjZpd6MwDVRD1M6w6tc9Z0TjPJ7bC8VkxPtx/ZhxO6aPOmZaXD8EMxsSM1JzsX060e8FmbAhtCrwPe3WU652eDTy8H6d26nlAmuutjmf0oNRH3oO8BRxJk80d9Ej1k/IDzC6yUXmtwNemY2E5ER4/9uNaZM1i19IWGa3cUFxBKDpLIzBKVr/F3heD5sqR6QfS0f+P8+7QPu/MhuJ601pMAhnYdSTgFAL98dmQ8O0M7RdYtfn74bjHJ5c/Eg/QT9Ab2tzcTR3Nk7No7MfoRPWJoqh7LYJlojQQJ1b8irLrIXvFP7aceeYyJ5F40wTkQsfXqWXvFgdGaf5AZrXcQZX8YFWQOc+JiBzGPTGnja7JllWm9cS0YEwqD0tJkRNjMY5JrK6r/Tz0A8E3ulaTc/sAkUkgEE4N//yMU5ibZvj9mlx6Ags4tSr4uaYyI7naJzCU3xQAV4wu8Dyo4Hiw2K28nCGet+ZhNEw/fhviGoi0gT/aCdoR3YG5S7cTBMDPAGt8BpPGjz2fqCfkB+O8YoGjz/QLOE8wkC0JaHkN0Sc76BlYJ4z27tK2OAa9SEmwFPEWTxpyLwTQCLoB2ndbi5tg4pjHIIysbL06XpMOD/nucQEGiJmII85v8xVL54XY9VpzwBxKC8JJVYjUjjO04RyIK94PyE/5mGqltZ/4M4e+C8YZneEYXZHGGZ3hGF2N0jpG7OJNggUn6bfAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                  </scg:List>
+                </uix:TargetAnchorable.Anchors>
+              </uix:TargetAnchorable>
+            </uix:NGetText.Target>
+          </uix:NGetText>
+        </Sequence>
+      </ActivityAction>
+    </uix:NApplicationCard.Body>
+    <uix:NApplicationCard.TargetApp>
+      <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASESURBVGhD7ZprTFRHFMdXpfXRxjbWZ7XxQ6OJfZjoF7WJsmp91FrF54dq1BpN8BU/NK1pqmii8RFTNTG2ia8aY/DxRaOygOyKYAAlgiAosqCBdUtd5CEuC8uyu8c5c+fevXc56wVckr0Jh/zI5n/O3J0ze2bYGcZkyjTHmVKnzzbdiLeZUuLbGBDjtJksZqvpBusz9p2/SIl3hAUZAQcfeJ4NHRD7YNWwF0Yom0i0YQKUwziQopEgRSNBij3Eh6nfgzlvO2wpPQari/bBGNtyMq5LkGIPkVjyF7jaGsAb8IHb3wKptfdhhDWBjO00pNgD9Gej/9rnhnBbU7SfjO80pPgeDE7/AUZkJEA/y0yNPtK6RHRZa7vt/2ri4iyzYDhrj+Wm1iNCit3gA8tsWFd8AIrfVIK9+QWcctyEIbcWKn5MqMxdLbotmS/oh3n5vykxX2etBdurAqj0OCGv8THMyN2m+CJCit3gu9wtrESaRdckO82SUMdMy90MBU12+N9bD9UtL+FQZTJ8lDaf+0bblsETd5VoKZmjxQXfZK/TPKMDpEgwNGMRTMhao2Hs7ZWKf3/lBfG2IWvxezWl0IeB5TE1ZxN8xUYbPzXZl/DgT2gMmyPYfuOjw0oMCSkSbH98nI+IozXExf9sin9n+WnxtiHDSaueC5tLj8KJqqsKh59dYgkt5r4F+Tug3tckWkrW7G+FtUUHlPYkpEiwq/wMBNmP2rBeZf/4O6t57QdEDC6Tfzw9qXmGxXWP+2TDER93ZxX3fZK+gC+rvmA79/mDAchpKNH/W0GKBHoJ4EjjPDj0LJmN7jU2oQ+y+p6neca7EkA+ty6D38v+gb9Z+132MxpfREiRQC8BGazrAalzWL2bO/j0EkCwHbbvG7YMR4QUCfQSGJg2F+bc/xVWFO7RgBNXjtFLACe3uu3ygiT9T4EUCfQSwGXwYVOF8IRMPZJ6CSQ7rcIjmS/QzhcP2U9CigS9CTB6E6AgRYLeBBi9CVCQIkFS+dmw7hsoAfyagF8Rwi3j1QMlJqYTGGVdCrfrCsVjQ3a5JlOJickEJt3dwEsnv7GMPyzckuxnldiYTAAbUx1HQ33y3Y1KrKESwNXo3Is0zTdOwySAG5abrrwOG42YTAC3c0/d1fDcU8N3W1n1xZBYcgQ+FhtxNXhAdf1lDlQ0OzWoE7DVFYiuSebyNsCXmT8r/qPPr0CFh7UT4CkGnnTIfhJSFOBhFJ7n4GjjEUlfYpMigx39NP1H+OzWIg2yHzf3ztZa0XXJytxV8IVthRIzmG0rh7E9shrcZ8h+ElLsAbaWHuNzR22W2ntsYH4i4zsNKUYR3B7i5t7j94puS+YP+vmpXD/LLLJdpyHFKILz5bwzXXQ7ZFjjE7PXk226BClGEZw3ONKBYKh8mto9fP+snuDdhhSjzKqHe/mKU+Otg5TaPPg2+xcyrluQYpTBI8iVhXtgSk4iDNJbVboKKRoJUjQSpGgk2C+D/6NbuuRBOWMfvCbBL0wY9bIHXlThV1bwhXTpwxjXbbBqcOAzzXFvAW64Lzsx/vc3AAAAAElFTkSuQmCC" InformativeScreenshot="7372978fb1ad5e67012d3a2bcd158e03.jpg" Selector="&lt;html app='msedge.exe' title='Free classifieds in Uganda ▷ Post free classified ads on Jiji.ug' /&gt;" Url="[&quot;https://jiji.ug/sellerpage-&quot;+SellerId.ToString]" />
+    </uix:NApplicationCard.TargetApp>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+  </uix:NApplicationCard>
+</Activity>
